@@ -2,7 +2,7 @@ import 'package:encryption/src/permutation.dart';
 
 String decrypt(List <String> key, String cypher){
     cypher = permutation(cypher);
-    var dictionnaire = {
+    var map = {
       key[0] : "a",
       key[1] : "b",
       key[2] : "c",
@@ -38,8 +38,8 @@ String decrypt(List <String> key, String cypher){
     for (int i = 0; i < cypher.length; i++) {
       x = x + cypher[i];
 
-      if (dictionnaire.containsKey(x)) {
-        pt = pt + dictionnaire[x]!;
+      if (map.containsKey(x)) {
+        pt = pt + map[x]!;
         x = ""; 
       }
     }

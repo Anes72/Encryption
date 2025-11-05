@@ -1,7 +1,7 @@
 import 'package:encryption/src/permutation.dart';
 
 String encrypt(List<String> key,String pt){
-    var dictionnaire = {
+    var map = {
       "a" : key[0],
       "b" : key[1],
       "c" : key[2],
@@ -32,7 +32,7 @@ String encrypt(List<String> key,String pt){
     };
     var char = pt.split('');
     for (var i = 0; i < pt.length; i++) {
-      char[i] = dictionnaire[char[i]]!;
+      char[i] = map[char[i]]!;
     }
     String np = char.join();
     String cypher = permutation(np);

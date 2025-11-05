@@ -1,5 +1,4 @@
 import 'package:encryption/encryption.dart';
-import 'package:encryption/src/encryption.dart';
 import 'dart:io';
 
 void main() {
